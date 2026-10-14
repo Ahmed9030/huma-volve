@@ -1,16 +1,67 @@
-# React + Vite
+# Huma Volve
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite frontend app. The current entry point is the Vite starter screen; feature UI lives under `src/pages` and `src/components`.
 
-Currently, two official plugins are available:
+## Project structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```
+huma-volve/
+├── public/                     # Static files (favicon, icons)
+├── src/
+│   ├── assets/                 # Images and logos
+│   ├── components/
+│   │   ├── common/             # Shared UI (e.g. EmptyState)
+│   │   ├── layout/             # Navbar, Footer
+│   │   ├── providers/          # App-level providers
+│   │   ├── skeleton/           # Loading placeholders
+│   │   └── ui/                 # Base controls (Button, Input)
+│   ├── hooks/                  # Custom React hooks
+│   ├── pages/                  # Page views (Home, About)
+│   ├── App.jsx                 # Root component
+│   ├── App.css
+│   ├── main.jsx                # App bootstrap
+│   └── index.css
+├── index.html
+├── package.json
+├── vite.config.js
+└── eslint.config.js
+```
 
-## React Compiler
+| Path | Role |
+| --- | --- |
+| `src/main.jsx` | Mounts the React app on `#root` |
+| `src/App.jsx` | Root UI currently rendered |
+| `src/pages/` | Screen-level views |
+| `src/components/` | Reusable layout, UI, and helpers |
+| `src/hooks/` | Shared hooks such as `useDebounce` |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Prerequisites
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm (comes with Node.js)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup and run
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server (hot reload):
+
+```bash
+npm run dev
+```
+
+Open the URL Vite prints in the terminal (usually `http://localhost:5173`).
+
+## Other commands
+
+| Command | What it does |
+| --- | --- |
+| `npm run build` | Production build into `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
+
+Edit files under `src/` and save — Vite will refresh the browser automatically.
