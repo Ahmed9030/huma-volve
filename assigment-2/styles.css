@@ -1,0 +1,89 @@
+/* Basic page layout and shared text styles. */
+body {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: #263238;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+h1 {
+    margin-bottom: 24px;
+    color: #234;
+}
+
+#app {
+    display: grid;
+    gap: 20px;
+}
+
+/* Simple card styling, including its optional image. */
+.card {
+    padding: 20px;
+    border: 1px solid #dce2e8;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 6%);
+}
+
+.card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
+
+.card h2 {
+    margin: 0 0 8px;
+}
+
+.card p {
+    margin: 0;
+    color: #58636d;
+}
+
+/* Clear table borders and a light background for alternating rows. */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border: 1px solid #dce2e8;
+    text-align: left;
+}
+
+.table th {
+    color: #fff;
+    background: #345b70;
+}
+
+.table.striped tbody tr:nth-child(even) {
+    background: #edf2f5;
+}
+
+/* A small button with hover and disabled states. */
+.button {
+    width: fit-content;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    background: #2878a5;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+    background: #1d5d80;
+}
+
+.button:disabled {
+    background: #9aa8b0;
+    cursor: not-allowed;
+}
