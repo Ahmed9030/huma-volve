@@ -13,9 +13,11 @@ huma-volve/
 │   │   ├── common/             # Shared UI (e.g. EmptyState)
 │   │   ├── layout/             # Navbar, Footer
 │   │   ├── providers/          # App-level providers
+│   │   ├── sections/           # Page sections (Products, Categories)
 │   │   ├── skeleton/           # Loading placeholders
 │   │   └── ui/                 # Base controls (Button, Input)
-│   ├── hooks/                  # Custom React hooks
+│   ├── hooks/                  # Custom React hooks (useProduct)
+│   ├── lib/                    # Utilities (api client)
 │   ├── pages/                  # Page views (Home, About)
 │   ├── App.jsx                 # Root component
 │   ├── App.css
@@ -33,7 +35,9 @@ huma-volve/
 | `src/App.jsx` | Root UI currently rendered |
 | `src/pages/` | Screen-level views |
 | `src/components/` | Reusable layout, UI, and helpers |
-| `src/hooks/` | Shared hooks such as `useDebounce` |
+| `src/components/sections/` | Feature sections (ProductsSection, CategoriesSection) |
+| `src/hooks/` | Shared hooks such as `useProduct` |
+| `src/lib/` | Low-level utilities like API client |
 
 ## Prerequisites
 
